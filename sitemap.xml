@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://alisufiyanshaikh.github.io/</loc>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+  </url>
   <url>
     <loc>https://alisufiyanshaikh.github.io/about-me/</loc>
-    <lastmod>2025-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
   </url>
-
   <url>
     <loc>https://alisufiyanshaikh.github.io/about-me/hi/</loc>
-    <lastmod>2025-07-07</lastmod>
+    <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://alisufiyanshaikh.github.io/about-me/kn/</loc>
-    <lastmod>2025-07-07</lastmod>
+    <priority>0.80</priority>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
 </urlset>
