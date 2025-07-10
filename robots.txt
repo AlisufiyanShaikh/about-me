@@ -1,4 +1,42 @@
+# General rule for all bots
 User-agent: *
 Allow: /
 
-Sitemap: https://alisufiyanshaikh.github.io/about-me/sitemap.xml
+# Explicit Google Ads crawler (desktop)
+User-agent: AdsBot-Google
+Allow: /
+
+# Google Ads mobile crawler
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Bing search engine bot
+User-agent: bingbot
+Allow: /
+
+# Google web crawler
+User-agent: Googlebot
+Allow: /
+
+# Google mobile bot
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Google image crawler
+User-agent: Googlebot-Image
+Allow: /
+
+# LinkedIn preview bot
+User-agent: LinkedInBot
+Allow: /
+
+# Facebook and Instagram link preview bot
+User-agent: FacebookExternalHit
+Allow: /
+
+# Twitter card fetcher
+User-agent: Twitterbot
+Allow: /
+
+# Sitemap reference
+Sitemap: https://alisufiyanshaikh.github.io/sitemap.xml
