@@ -1,0 +1,35 @@
+{
+"name": "Alisufiyan Shaikh – About Me",
+"short_name": "Alisufiyan",
+"start_url": "/about-me/",
+"scope": "/about-me/",
+"display": "standalone",
+"orientation": "portrait",
+"background_color": "#0f172a",
+"theme_color": "#111827",
+"lang": "en",
+"dir": "ltr",
+"description": "Official personal identity and professional portfolio of Alisufiyan Shaikh – Political Strategist, eSports Analyst, and Digital Creator.",
+"categories": ["portfolio", "productivity", "personal"],
+"icons": [
+{
+"src": "https://alisufiyanshaikh.github.io/favicon-32x32.png",
+"sizes": "32x32",
+"type": "image/png"
+},
+{
+"src": "https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp",
+"sizes": "192x192",
+"type": "image/webp",
+"purpose": "any maskable"
+},
+{
+"src": "https://alisufiyanshaikh.github.io/android-chrome-512x512.png",
+"sizes": "512x512",
+"type": "image/png",
+"purpose": "any maskable"
+}
+]
+}
+
+Don't add screenshot
