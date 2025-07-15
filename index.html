@@ -22,6 +22,8 @@
   <!-- Preload Critical Resources -->
   <link rel="preload" href="https://res.cloudinary.com/dpm27lokj/image/upload/w_320,h_320,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp" as="image">
   <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
 
   <!-- Open Graph & Twitter Meta -->
   <meta property="og:title" content="Alisufiyan Shaikh – About Me" />
@@ -29,10 +31,13 @@
   <meta property="og:image" content="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
   <meta property="og:url" content="https://alisufiyanshaikh.github.io/about-me/" />
   <meta property="og:type" content="profile" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Alisufiyan Shaikh" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Alisufiyan Shaikh – About Me" />
   <meta name="twitter:description" content="Verified identity of Alisufiyan Shaikh: strategist, creator, esports analyst." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
+  <meta name="twitter:creator" content="@alisufiyanshaxx" />
 
   <!-- Structured Data: Person -->
   <script type="application/ld+json">
@@ -47,37 +52,24 @@
       "https://www.instagram.com/alisufiyanshaxx",
       "https://x.com/alisufiyanshaxx",
       "https://www.linkedin.com/in/alisufiyanshaikh",
-      "https://www.youtube.com/@alisufiyanshaxx"
+      "https://www.youtube.com/@alisufiyanshaxx",
+      "https://github.com/alisufiyanshaikh",
+      "https://www.wikidata.org/wiki/Q135209635"
     ],
     "jobTitle": "Political Strategist, eSports Analyst, Digital Creator",
     "worksFor": {
       "@type": "Organization",
-      "name": "Self-employed"
+      "name": "Independent Strategy Network"
     },
     "birthDate": "2005-06-25",
-    "nationality": "Indian"
-  }
-  </script>
-
-  <!-- Structured Data: Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://alisufiyanshaikh.github.io/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Me",
-        "item": "https://alisufiyanshaikh.github.io/about-me/"
-      }
-    ]
+    "nationality": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Daffodils School of Education"
+    }
   }
   </script>
 
@@ -111,6 +103,16 @@
         extend: {
           outline: {
             blue: '2px solid #3b82f6'
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            }
           }
         }
       }
@@ -123,6 +125,13 @@
     .lazy-load.loaded { opacity: 1; }
     a:focus, button:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
     .min-touch { min-width: 48px; min-height: 48px; }
+    .animate-fade-in { animation: fade-in 0.5s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .lazy-load, .animate-fade-in, [data-aos] {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-950 text-white font-sans leading-relaxed">
@@ -131,12 +140,12 @@
 
   <div class="absolute top-6 right-6 z-50" data-aos="fade-left">
     <div class="relative inline-block text-left">
-      <button onclick="toggleLangMenu()" aria-label="Toggle language menu" class="inline-flex justify-center w-full rounded-md border border-gray-600 shadow-sm px-4 py-2 bg-gray-800 text-sm font-medium text-white hover:bg-gray-700 focus:outline-blue">
+      <button onclick="toggleLangMenu()" aria-label="Toggle language menu" aria-expanded="false" aria-controls="langMenu" class="inline-flex justify-center w-full rounded-md border border-gray-600 shadow-sm px-4 py-2 bg-gray-800 text-sm font-medium text-white hover:bg-gray-700 focus:outline-blue">
         🌐 Language
         <svg class="-mr-1 ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20"><path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div id="langMenu" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-        <a href="/about-me/" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇬🇧 English</a>
+        <a href="/about-me/" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100" lang="en">🇬🇧 English</a>
         <a href="/about-me/hi/" lang="hi" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇮🇳 हिंदी</a>
         <a href="/about-me/kn/" lang="kn" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇮🇳 ಕನ್ನಡ</a>
         <a href="/about-me/mr/" lang="mr" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇮🇳 मराठी</a>
@@ -145,13 +154,16 @@
   </div>
   <script>
     function toggleLangMenu() {
-      document.getElementById('langMenu').classList.toggle('hidden');
+      const menu = document.getElementById('langMenu');
+      const isExpanded = menu.classList.toggle('hidden');
+      document.querySelector('[aria-controls="langMenu"]').setAttribute('aria-expanded', !isExpanded);
     }
     document.addEventListener('click', function(event) {
       const langMenu = document.getElementById('langMenu');
       const langButton = document.querySelector('[aria-label="Toggle language menu"]');
       if (!langMenu.contains(event.target) && !langButton.contains(event.target)) {
         langMenu.classList.add('hidden');
+        langButton.setAttribute('aria-expanded', 'false');
       }
     });
   </script>
@@ -159,7 +171,7 @@
   <nav class="px-6 pt-6 text-sm text-gray-400" aria-label="Breadcrumb">
     <ol class="list-reset flex">
       <li><a href="https://alisufiyanshaikh.github.io/" class="hover:underline text-white">Home</a></li>
-      <li><span class="mx-2">/</span></li>
+      <li><span class="mx-2" aria-hidden="true">/</span></li>
       <li class="text-gray-500">About Me</li>
     </ol>
   </nav>
@@ -169,7 +181,10 @@
          srcset="https://res.cloudinary.com/dpm27lokj/image/upload/w_160,h_160,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp 160w,
                  https://res.cloudinary.com/dpm27lokj/image/upload/w_320,h_320,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp 320w"
          sizes="(max-width: 640px) 160px, 320px"
-         alt="Alisufiyan Shaikh" loading="lazy"
+         alt="Portrait of Alisufiyan Shaikh" 
+         loading="lazy"
+         width="160"
+         height="160"
          class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg lazy-load"
          onload="this.classList.add('loaded')"/>
     <h1 class="text-5xl font-bold mt-6">Alisufiyan Shaikh</h1>
@@ -180,62 +195,162 @@
   <main id="main" class="px-6 py-12 max-w-4xl mx-auto">
     <section class="mb-12" data-aos="fade-right">
       <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-      <p class="text-gray-300">
-        I'm <strong>Alisufiyan Shaikh</strong>, born on <strong>June 25, 2005</strong>, and shaped by the vision and values of my father, <strong>Mohammad Irfan Ibrahim Shaikh</strong>—a man whose principles molded the strategic mindset I operate with today.<br><br>
-        Known across different communities as <strong>Sufiyan Anna Ji</strong> and <strong>Ali Bhau</strong>, I represent a leadership philosophy grounded in precision, trust, and executional clarity.<br><br>
-        As a <strong>digital strategist and systems architect</strong>, I design scalable frameworks that integrate political intelligence, competitive esports analytics, and visual media ecosystems...
-      </p>
+      <div class="text-gray-300 space-y-4">
+        <p>I'm <strong>Alisufiyan Shaikh</strong>, born on <strong>June 25, 2005</strong>, and shaped by the vision and values of my father, <strong>Mohammad Irfan Ibrahim Shaikh</strong>—a man whose principles molded the strategic mindset I operate with today.</p>
+        <p>Known across different communities as <strong>Sufiyan Anna Ji</strong> and <strong>Ali Bhau</strong>, I represent a leadership philosophy grounded in precision, trust, and executional clarity.</p>
+        <p>As a <strong>digital strategist and systems architect</strong>, I design scalable frameworks that integrate political intelligence, competitive esports analytics, and visual media ecosystems.</p>
+        <p>In Free Fire, I've achieved Grandmaster rank in over 20 seasons with a KD of 8.5 and a 45% headshot rate—earning elite titles in M1014 and M249. In BGMI, I've reached the Conqueror tier through tactical discipline, reaction speed, and foresight.</p>
+        <p>I'm also known online as <strong>@alisufiyanshaxx</strong>, and I pursue fitness as a discipline and cinematic storytelling through candid visual narratives.</p>
+        <p>This platform isn't for vanity—it's an operational asset. Engineered for credibility. Structured for reach. Optimized for strategic impact.</p>
+      </div>
     </section>
 
     <section class="mb-12" data-aos="zoom-in">
       <h2 class="text-2xl font-semibold mb-4">Connect</h2>
       <div class="flex flex-wrap gap-4">
-        <a href="https://instagram.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 min-touch">Instagram</a>
-        <a href="https://x.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">X</a>
-        <a href="https://www.youtube.com/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">YouTube</a>
-        <a href="https://www.pinterest.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">Pinterest</a>
-        <a href="https://www.threads.net/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">Threads</a>
-        <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">LinkedIn</a>
+        <a href="https://instagram.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 min-touch transition-colors duration-200">Instagram</a>
+        <a href="https://x.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch transition-colors duration-200">X</a>
+        <a href="https://www.youtube.com/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch transition-colors duration-200">YouTube</a>
+        <a href="https://www.pinterest.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch transition-colors duration-200">Pinterest</a>
+        <a href="https://www.threads.net/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch transition-colors duration-200">Threads</a>
+        <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch transition-colors duration-200">LinkedIn</a>
       </div>
     </section>
 
     <section class="mb-12" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-4">Contact</h2>
       <form action="https://formspree.io/f/xvgrdver" method="POST" class="space-y-4 max-w-xl">
-        <label for="name" class="block text-gray-400">Name</label>
-        <input id="name" type="text" name="name" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue" placeholder="Your Name">
-        <label for="email" class="block text-gray-400">Email</label>
-        <input id="email" type="email" name="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue" placeholder="Your Email">
-        <label for="message" class="block text-gray-400">Message</label>
-        <textarea id="message" name="message" rows="5" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue" placeholder="Your Message"></textarea>
+        <div>
+          <label for="name" class="block text-gray-400 mb-1">Name</label>
+          <input id="name" type="text" name="name" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue focus:border-blue-500 transition-colors duration-200" placeholder="Your Name" aria-required="true">
+        </div>
+        <div>
+          <label for="email" class="block text-gray-400 mb-1">Email</label>
+          <input id="email" type="email" name="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue focus:border-blue-500 transition-colors duration-200" placeholder="Your Email" aria-required="true">
+        </div>
+        <div>
+          <label for="message" class="block text-gray-400 mb-1">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue focus:border-blue-500 transition-colors duration-200" placeholder="Your Message" aria-required="true"></textarea>
+        </div>
         <input type="text" name="_gotcha" style="display:none">
-        <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-300 min-touch focus:outline-blue">Send Message</button>
+        <input type="hidden" name="_subject" value="New contact form submission">
+        <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-300 min-touch focus:outline-blue focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-950 transition-colors duration-200">
+          <span class="flex items-center justify-center">
+            <span id="submit-text">Send Message</span>
+            <span id="submit-spinner" class="hidden ml-2">
+              <svg class="animate-spin h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </span>
+          </span>
+        </button>
       </form>
-      <div id="form-status" class="hidden mt-4 p-3 rounded"></div>
+      <div id="form-status" class="hidden mt-4 p-3 rounded" role="alert"></div>
     </section>
   </main>
 
   <footer class="text-center py-10 border-t border-gray-700" data-aos="fade-in">
-    <p class="text-gray-500 text-sm">&copy; 2025 Alisufiyan Shaikh. All rights reserved.</p>
-    <p class="text-gray-600 text-xs italic mt-1">Trademark and digital identity protected under international law.</p>
-    <p class="text-gray-400 text-sm mt-2">Profiles:
-      <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" class="underline text-white hover:text-gray-300">LinkedIn</a> |
-      <a href="https://instagram.com/alisufiyanshaxx" target="_blank" class="underline text-white hover:text-gray-300">Instagram</a>
-    </p>
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-gray-500 text-sm">&copy; 2025 Alisufiyan Shaikh. All rights reserved.</p>
+      <p class="text-gray-600 text-xs italic mt-1">Trademark and digital identity protected under international law.</p>
+      <div class="mt-4">
+        <p class="text-gray-400 text-sm">Profiles:</p>
+        <div class="flex justify-center space-x-4 mt-2">
+          <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" rel="noopener noreferrer" class="underline text-white hover:text-gray-300 transition-colors duration-200">LinkedIn</a>
+          <a href="https://instagram.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="underline text-white hover:text-gray-300 transition-colors duration-200">Instagram</a>
+          <a href="https://github.com/alisufiyanshaikh" target="_blank" rel="noopener noreferrer" class="underline text-white hover:text-gray-300 transition-colors duration-200">GitHub</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+      // Initialize AOS animations
+      AOS.init({ 
+        duration: 800, 
+        easing: 'ease-in-out', 
+        once: true,
+        offset: 120 
+      });
+
+      // Form submission handler
       const form = document.querySelector('form');
       const formStatus = document.getElementById('form-status');
+      const submitText = document.getElementById('submit-text');
+      const submitSpinner = document.getElementById('submit-spinner');
+
       if (form) {
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
+          
+          // Show loading state
+          submitText.textContent = 'Sending...';
+          submitSpinner.classList.remove('hidden');
+          form.querySelector('button[type="submit"]').disabled = true;
+          
+          // Show status message
           formStatus.classList.remove('hidden');
-          formStatus.textContent = 'Sending...';
-          formStatus.className = 'mt-4 p-3 rounded bg-blue-900 text-blue-100';
+          formStatus.textContent = 'Sending your message...';
+          formStatus.className = 'mt-4 p-3 rounded bg-blue-900 text-blue-100 animate-fade-in';
+          
           try {
             const response = await fetch(form.action, {
               method: 'POST',
-              body
+              body: new FormData(form),
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+            
+            if (response.ok) {
+              formStatus.textContent = 'Message sent successfully! I will get back to you soon.';
+              formStatus.className = 'mt-4 p-3 rounded bg-green-900 text-green-100 animate-fade-in';
+              form.reset();
+            } else {
+              throw new Error('Form submission failed');
+            }
+          } catch (error) {
+            formStatus.textContent = 'Error sending message. Please try again or contact me directly via social media.';
+            formStatus.className = 'mt-4 p-3 rounded bg-red-900 text-red-100 animate-fade-in';
+          } finally {
+            // Reset button state
+            submitText.textContent = 'Send Message';
+            submitSpinner.classList.add('hidden');
+            form.querySelector('button[type="submit"]').disabled = false;
+            
+            // Hide status message after 5 seconds
+            setTimeout(() => {
+              formStatus.classList.add('hidden');
+            }, 5000);
+          }
+        });
+      }
+
+      // Add intersection observer for lazy loading
+      const lazyLoadImages = document.querySelectorAll('.lazy-load');
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.classList.add('loaded');
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+
+        lazyLoadImages.forEach((img) => {
+          imageObserver.observe(img);
+        });
+      } else {
+        // Fallback for browsers without IntersectionObserver
+        lazyLoadImages.forEach((img) => {
+          img.classList.add('loaded');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
