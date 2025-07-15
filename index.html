@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Security Meta Tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src * data: blob:;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=()" />
+
   <title>Alisufiyan Shaikh – About Me</title>
   <meta name="description" content="Official About Me page of Alisufiyan Shaikh – Political Strategist, eSports Analyst, and Digital Creator." />
+  <meta name="keywords" content="Alisufiyan Shaikh, political strategist, esports analyst, digital creator, Free Fire grandmaster, BGMI conqueror, Indian influencer" />
   <meta name="author" content="Alisufiyan Shaikh" />
   <meta name="robots" content="index, follow" />
   <meta name="google-site-verification" content="xTm9d0zBNlfEkLFqTX-nvSbwrweMQ6TrwCLVfXTAMZs" />
@@ -13,70 +24,67 @@
   <link rel="alternate" hreflang="hi-IN" href="https://alisufiyanshaikh.github.io/about-me/hi/" />
   <link rel="alternate" hreflang="kn-IN" href="https://alisufiyanshaikh.github.io/about-me/kn/" />
   <link rel="alternate" hreflang="mr-IN" href="https://alisufiyanshaikh.github.io/about-me/mr/" />
-  <link rel="icon" type="image/x-icon" href="https://alisufiyanshaikh.github.io/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="https://alisufiyanshaikh.github.io/favicon-32x32.png" />
+  <link rel="icon" href="https://alisufiyanshaikh.github.io/favicon.ico" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
-  <link rel="sitemap" type="application/xml" href="https://alisufiyanshaikh.github.io/sitemap.xml" />
-  
-  <!-- Open Graph & Twitter Meta -->
+  <link rel="manifest" href="/about-me/manifest.json" />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Alisufiyan Shaikh – About Me" />
   <meta property="og:description" content="Public identity and verified presence of Alisufiyan Shaikh across political, media, and esports domains." />
-  <meta property="og:image" content="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
-  <meta property="og:url" content="https://alisufiyanshaikh.github.io/about-me/" />
   <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://alisufiyanshaikh.github.io/about-me/" />
+  <meta property="og:image" content="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Alisufiyan Shaikh" />
+  <meta property="profile:first_name" content="Alisufiyan" />
+  <meta property="profile:last_name" content="Shaikh" />
+  <meta property="profile:username" content="alisufiyanshaxx" />
+  <meta property="profile:gender" content="male" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Alisufiyan Shaikh – About Me" />
   <meta name="twitter:description" content="Verified identity of Alisufiyan Shaikh: strategist, creator, esports analyst." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
-  
-  <!-- Google Analytics -->
+  <meta name="twitter:site" content="@alisufiyanshaxx" />
+  <meta name="twitter:creator" content="@alisufiyanshaxx" />
+
+  <!-- Tailwind, AOS, Lucide -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init();
+      lucide.createIcons();
+    });
+  </script>
+
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJERM8RMVV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-FJERM8RMVV');
   </script>
 
-  <!-- Tailwind + AOS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-  <script>document.addEventListener("DOMContentLoaded", () => { AOS.init(); });</script>
-
-  <!-- Structured Data (Schema.org) -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Alisufiyan M Shaikh",
-    "alternateName": [
-      "Sufiyan Anna Ji",
-      "Ali Bhau",
-      "alisufiyanshaxx",
-      "Alisufiyan Kolhapur",
-      "Alisufiyan Mudhol",
-      "Richie-Rich",
-      "DON"
-    ],
+    "name": "Alisufiyan Shaikh",
+    "alternateName": ["Sufiyan Anna Ji", "Ali Bhau", "alisufiyanshaxx", "Alisufiyan Kolhapur", "Alisufiyan Mudhol", "Richie-Rich", "DON"],
     "gender": "Male",
     "birthDate": "2005-06-25",
     "jobTitle": "Political Strategist, eSports Analyst, Digital Creator",
     "nationality": "Indian",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://alisufiyanshaikh.github.io/about-me/"
-    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://alisufiyanshaikh.github.io/about-me/" },
     "url": "https://alisufiyanshaikh.github.io/about-me/",
     "image": "https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp",
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Daffodils School of Education"
-    },
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Independent Strategy Network"
-    },
+    "alumniOf": { "@type": "EducationalOrganization", "name": "Daffodils School of Education" },
+    "affiliation": { "@type": "Organization", "name": "Independent Strategy Network" },
     "knowsAbout": ["Esports", "Political Strategy", "Media Architecture", "Cinematography"],
     "identifier": "AMS-ALIAS-0713-2025",
     "sameAs": [
@@ -86,85 +94,19 @@
       "https://www.pinterest.com/alisufiyanshaxx",
       "https://www.threads.net/@alisufiyanshaxx",
       "https://www.linkedin.com/in/alisufiyanshaikh",
-      "https://www.wikidata.org/wiki/Q135209635",
       "https://github.com/alisufiyanshaikh"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Alisufiyan Shaikh – About Me",
-    "url": "https://alisufiyanshaikh.github.io/about-me/"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://alisufiyanshaikh.github.io/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About Me",
-        "item": "https://alisufiyanshaikh.github.io/about-me/"
-      }
     ]
   }
   </script>
 </head>
 <body class="bg-gray-950 text-white font-sans leading-relaxed">
-
-  <!-- Language Toggle -->
-  <div class="absolute top-6 right-6 z-50" data-aos="fade-left">
-    <div class="relative inline-block text-left">
-      <button onclick="toggleLangMenu()" aria-label="Select language" class="inline-flex justify-center w-full rounded-md border border-gray-600 shadow-sm px-4 py-2 bg-gray-800 text-sm font-medium text-white hover:bg-gray-700">
-        🌐 Language
-        <svg class="-mr-1 ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20">
-          <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div id="langMenu" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-        <a href="/about-me/" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇬🇧 English</a>
-        <a href="/about-me/hi/" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇮🇳 हिंदी</a>
-        <a href="/about-me/kn/" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇮🇳 ಕನ್ನಡ</a>
-        <a href="/about-me/mr/" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇮🇳 मराठी</a>
-      </div>
-    </div>
-  </div>
-  <script>
-    function toggleLangMenu() {
-      document.getElementById('langMenu').classList.toggle('hidden');
-    }
-  </script>
-
-  <!-- Breadcrumb -->
-  <nav class="px-6 pt-6 text-sm text-gray-400" aria-label="Breadcrumb">
-    <ol class="list-reset flex">
-      <li><a href="https://alisufiyanshaikh.github.io/" class="hover:underline text-white">Home</a></li>
-      <li><span class="mx-2">/</span></li>
-      <li class="text-gray-500">About Me</li>
-    </ol>
-  </nav>
-
-  <!-- Hero Section -->
   <header class="text-center py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950" data-aos="fade-up">
-    <img src="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" alt="Alisufiyan Shaikh" loading="lazy" class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg" />
+    <img src="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" alt="Alisufiyan Shaikh" class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg" loading="lazy" />
     <h1 class="text-5xl font-bold mt-6">Alisufiyan Shaikh</h1>
     <p class="text-lg text-gray-300 mt-2">Political Strategist | eSports Analyst | Digital Creator</p>
     <p class="italic text-gray-500 mt-2">“I don’t adapt to systems—I engineer new standards.”</p>
   </header>
 
-  <!-- About Section -->
   <main class="px-6 py-12 max-w-4xl mx-auto">
     <section class="mb-12" data-aos="fade-right">
       <h2 class="text-2xl font-semibold mb-4">About Me</h2>
@@ -177,44 +119,56 @@
       </p>
     </section>
 
-    <!-- Connect Section -->
     <section class="mb-12" data-aos="zoom-in">
       <h2 class="text-2xl font-semibold mb-4">Connect</h2>
       <div class="flex flex-wrap gap-4">
-        <a href="https://instagram.com/alisufiyanshaxx" target="_blank" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200">Instagram</a>
-        <a href="https://x.com/alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black">X</a>
-        <a href="https://www.youtube.com/@alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black">YouTube</a>
-        <a href="https://www.pinterest.com/alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black">Pinterest</a>
-        <a href="https://www.threads.net/@alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black">Threads</a>
-        <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black">LinkedIn</a>
-        <a href="https://www.wikidata.org/wiki/Q135209635" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black">Wikidata</a>
+        <a href="https://instagram.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded hover:bg-gray-200"><i data-lucide="instagram"></i> Instagram</a>
+        <a href="https://x.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-white px-4 py-2 rounded hover:bg-white hover:text-black"><i data-lucide="twitter"></i> X</a>
+        <a href="https://www.youtube.com/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-white px-4 py-2 rounded hover:bg-white hover:text-black"><i data-lucide="youtube"></i> YouTube</a>
+        <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-white px-4 py-2 rounded hover:bg-white hover:text-black"><i data-lucide="linkedin"></i> LinkedIn</a>
+        <a href="https://www.threads.net/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-white px-4 py-2 rounded hover:bg-white hover:text-black"><i data-lucide="send"></i> Threads</a>
+        <a href="https://www.pinterest.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-white px-4 py-2 rounded hover:bg-white hover:text-black"><i data-lucide="image"></i> Pinterest</a>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="mb-12" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-4">Contact</h2>
       <form action="https://formspree.io/f/xvgrdver" method="POST" class="space-y-4 max-w-xl">
         <label for="name" class="block text-gray-400">Name</label>
-        <input id="name" type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white" />
+        <input id="name" name="name" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white" placeholder="Your Name" />
         <label for="email" class="block text-gray-400">Email</label>
-        <input id="email" type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white" />
+        <input id="email" name="email" type="email" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white" placeholder="Your Email" />
         <label for="message" class="block text-gray-400">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" rows="5" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white"></textarea>
+        <textarea id="message" name="message" rows="5" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white" placeholder="Your Message"></textarea>
         <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-300">Send Message</button>
       </form>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="text-center py-10 border-t border-gray-700" data-aos="fade-in">
     <p class="text-gray-500 text-sm">&copy; 2025 Alisufiyan Shaikh. All rights reserved.</p>
     <p class="text-gray-600 text-xs italic mt-1">Trademark and digital identity protected under international law.</p>
-    <p class="text-gray-400 text-sm mt-2">Profiles:
-      <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" class="underline text-white">LinkedIn</a> |
-      <a href="https://www.wikidata.org/wiki/Q135209635" target="_blank" class="underline text-white">Wikidata</a>
+    <p class="text-gray-400 text-sm mt-2">
+      Social Presence:
+      <a href="https://www.linkedin.com/in/alisufiyanshaikh" class="underline text-white" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+      <a href="https://instagram.com/alisufiyanshaxx" class="underline text-white" target="_blank" rel="noopener noreferrer">Instagram</a> |
+      <a href="https://x.com/alisufiyanshaxx" class="underline text-white" target="_blank" rel="noopener noreferrer">X</a> |
+      <a href="https://www.threads.net/@alisufiyanshaxx" class="underline text-white" target="_blank" rel="noopener noreferrer">Threads</a> |
+      <a href="https://www.youtube.com/@alisufiyanshaxx" class="underline text-white" target="_blank" rel="noopener noreferrer">YouTube</a> |
+      <a href="https://www.pinterest.com/alisufiyanshaxx" class="underline text-white" target="_blank" rel="noopener noreferrer">Pinterest</a>
     </p>
     <a href="#" class="block mt-4 text-sm text-white underline hover:text-gray-400">↑ Back to Top</a>
   </footer>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/about-me/sw.js').then(function(registration) {
+        console.log('✅ Service Worker registered with scope:', registration.scope);
+      }).catch(function(error) {
+        console.error('❌ Service Worker registration failed:', error);
+      });
+    }
+  </script>
 </body>
-</html>
+    </html>
