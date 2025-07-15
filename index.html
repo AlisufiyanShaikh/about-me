@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.jsdelivr.net https://res.cloudinary.com https://www.googletagmanager.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; script-src 'self' https://www.googletagmanager.com https://unpkg.com; img-src 'self' data: https://res.cloudinary.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://unpkg.com; img-src 'self' https://res.cloudinary.com; style-src 'self' https://unpkg.com 'unsafe-inline';" />
   <title>Alisufiyan Shaikh – About Me</title>
   <meta name="description" content="Official About Me page of Alisufiyan Shaikh – Indian Journalist, eSports Analyst, and Digital Creator." />
   <meta name="author" content="Alisufiyan Shaikh" />
@@ -14,16 +14,16 @@
   <link rel="alternate" hreflang="hi-IN" href="https://alisufiyanshaikh.github.io/about-me/hi/" />
   <link rel="alternate" hreflang="kn-IN" href="https://alisufiyanshaikh.github.io/about-me/kn/" />
   <link rel="alternate" hreflang="mr-IN" href="https://alisufiyanshaikh.github.io/about-me/mr/" />
-  <link rel="icon" type="image/x-icon" href="https://alisufiyanshaikh.github.io/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="https://alisufiyanshaikh.github.io/favicon-32x32.png" />
+  <link rel="icon" href="https://alisufiyanshaikh.github.io/favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
   <link rel="sitemap" type="application/xml" href="https://alisufiyanshaikh.github.io/sitemap.xml" />
+  <link rel="manifest" href="/about-me/manifest.json" />
+
+  <!-- Preload Critical Resources -->
   <link rel="preload" href="https://res.cloudinary.com/dpm27lokj/image/upload/w_320,h_320,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp" as="image">
   <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
+  <!-- Open Graph & Twitter Meta -->
   <meta property="og:title" content="Alisufiyan Shaikh – About Me" />
   <meta property="og:description" content="Public identity and verified presence of Alisufiyan Shaikh across political, media, and esports domains." />
   <meta property="og:image" content="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
@@ -34,10 +34,58 @@
   <meta name="twitter:description" content="Verified identity of Alisufiyan Shaikh: strategist, creator, esports analyst." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp" />
 
+  <!-- Structured Data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alisufiyan Shaikh",
+    "alternateName": ["Alisufiyan M Shaikh", "Sufiyan Anna Ji", "Ali Bhau", "alisufiyanshaxx"],
+    "url": "https://alisufiyanshaikh.github.io/about-me/",
+    "image": "https://res.cloudinary.com/dpm27lokj/image/upload/v1751126335/IMG_20250429_140003_711_u0aftl.webp",
+    "sameAs": [
+      "https://www.instagram.com/alisufiyanshaxx",
+      "https://x.com/alisufiyanshaxx",
+      "https://www.linkedin.com/in/alisufiyanshaikh",
+      "https://www.youtube.com/@alisufiyanshaxx"
+    ],
+    "jobTitle": "Political Strategist, eSports Analyst, Digital Creator",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Self-employed"
+    },
+    "birthDate": "2005-06-25",
+    "nationality": "Indian"
+  }
+  </script>
+
+  <!-- Structured Data: Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://alisufiyanshaikh.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Me",
+        "item": "https://alisufiyanshaikh.github.io/about-me/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJERM8RMVV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-FJERM8RMVV');
     document.addEventListener('DOMContentLoaded', function() {
@@ -55,22 +103,26 @@
     });
   </script>
 
+  <!-- Tailwind + AOS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          outline: {
+            blue: '2px solid #3b82f6'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <style>
-    .lazy-load {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .lazy-load.loaded {
-      opacity: 1;
-    }
-    a:focus, button:focus {
-      outline: 2px solid #3b82f6;
-      outline-offset: 2px;
-    }
-    .min-touch {
-      min-width: 48px;
-      min-height: 48px;
-    }
+    .lazy-load { opacity: 0; transition: opacity 0.3s ease; }
+    .lazy-load.loaded { opacity: 1; }
+    a:focus, button:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+    .min-touch { min-width: 48px; min-height: 48px; }
   </style>
 </head>
 <body class="bg-gray-950 text-white font-sans leading-relaxed">
@@ -81,9 +133,7 @@
     <div class="relative inline-block text-left">
       <button onclick="toggleLangMenu()" aria-label="Toggle language menu" class="inline-flex justify-center w-full rounded-md border border-gray-600 shadow-sm px-4 py-2 bg-gray-800 text-sm font-medium text-white hover:bg-gray-700 focus:outline-blue">
         🌐 Language
-        <svg class="-mr-1 ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20">
-          <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg class="-mr-1 ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 20 20"><path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div id="langMenu" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
         <a href="/about-me/" class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">🇬🇧 English</a>
@@ -112,63 +162,70 @@
       <li><span class="mx-2">/</span></li>
       <li class="text-gray-500">About Me</li>
     </ol>
-  </nav>  <!-- Hero Section -->  <header class="text-center py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950" data-aos="fade-up">
-    <img 
-      src="https://res.cloudinary.com/dpm27lokj/image/upload/w_320,h_320,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp"
-      alt="Alisufiyan Shaikh" 
-      loading="lazy"
-      class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg lazy-load"
-      onload="this.classList.add('loaded')"
-    />
+  </nav>
+
+  <header class="text-center py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950" data-aos="fade-up">
+    <img src="https://res.cloudinary.com/dpm27lokj/image/upload/w_160,h_160,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp"
+         srcset="https://res.cloudinary.com/dpm27lokj/image/upload/w_160,h_160,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp 160w,
+                 https://res.cloudinary.com/dpm27lokj/image/upload/w_320,h_320,c_fill,q_auto,f_auto/v1751126335/IMG_20250429_140003_711_u0aftl.webp 320w"
+         sizes="(max-width: 640px) 160px, 320px"
+         alt="Alisufiyan Shaikh" loading="lazy"
+         class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg lazy-load"
+         onload="this.classList.add('loaded')"/>
     <h1 class="text-5xl font-bold mt-6">Alisufiyan Shaikh</h1>
     <p class="text-lg text-gray-300 mt-2">Indian Journalist | Esports Athlete | Digital Creator</p>
     <p class="italic text-gray-500 mt-2">"I don't adapt to systems—I engineer new standards."</p>
-  </header>  <!-- Main Content -->  <main id="main" class="px-6 py-12 max-w-4xl mx-auto">
+  </header>
+
+  <main id="main" class="px-6 py-12 max-w-4xl mx-auto">
     <section class="mb-12" data-aos="fade-right">
       <h2 class="text-2xl font-semibold mb-4">About Me</h2>
       <p class="text-gray-300">
-        I'm <strong>Alisufiyan Shaikh</strong>, born on <strong>June 25, 2005</strong>, and shaped by the vision and values of my father, <strong>Mohammad Irfan Ibrahim Shaikh</strong>.
-        Known across communities as <strong>Sufiyan Anna Ji</strong> and <strong>Ali Bhau</strong>, I lead through precision, trust, and strategic execution.
-        As a <strong>digital strategist and systems architect</strong>, I integrate political intelligence, esports analytics, and visual storytelling.
-        Grandmaster in Free Fire (20+ seasons, KD 8.5, 45% headshot), Conqueror in BGMI.
-        Fitness discipline. Cinematic storytelling. @alisufiyanshaxx.
-        This platform isn't vanity. It's an operational asset.
+        I'm <strong>Alisufiyan Shaikh</strong>, born on <strong>June 25, 2005</strong>, and shaped by the vision and values of my father, <strong>Mohammad Irfan Ibrahim Shaikh</strong>—a man whose principles molded the strategic mindset I operate with today.<br><br>
+        Known across different communities as <strong>Sufiyan Anna Ji</strong> and <strong>Ali Bhau</strong>, I represent a leadership philosophy grounded in precision, trust, and executional clarity.<br><br>
+        As a <strong>digital strategist and systems architect</strong>, I design scalable frameworks that integrate political intelligence, competitive esports analytics, and visual media ecosystems...
       </p>
-    </section><section class="mb-12" data-aos="zoom-in">
-  <h2 class="text-2xl font-semibold mb-4">Connect</h2>
-  <div class="flex flex-wrap gap-4">
-    <a href="https://instagram.com/alisufiyanshaxx" target="_blank" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 min-touch">Instagram</a>
-    <a href="https://x.com/alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">X</a>
-    <a href="https://www.youtube.com/@alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">YouTube</a>
-    <a href="https://www.pinterest.com/alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">Pinterest</a>
-    <a href="https://www.threads.net/@alisufiyanshaxx" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">Threads</a>
-    <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">LinkedIn</a>
-  </div>
-</section>
+    </section>
 
-<section class="mb-12" data-aos="fade-up">
-  <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-  <form action="https://formspree.io/f/xvgrdver" method="POST" class="space-y-4 max-w-xl">
-    <label for="name" class="block text-gray-400">Name</label>
-    <input id="name" name="name" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue">
-    <label for="email" class="block text-gray-400">Email</label>
-    <input id="email" type="email" name="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue">
-    <label for="message" class="block text-gray-400">Message</label>
-    <textarea id="message" name="message" rows="5" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue"></textarea>
-    <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-300 min-touch focus:outline-blue">Send Message</button>
-  </form>
-  <div id="form-status" class="hidden mt-4 p-3 rounded"></div>
-</section>
+    <section class="mb-12" data-aos="zoom-in">
+      <h2 class="text-2xl font-semibold mb-4">Connect</h2>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://instagram.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="bg-white text-black px-4 py-2 rounded hover:bg-gray-200 min-touch">Instagram</a>
+        <a href="https://x.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">X</a>
+        <a href="https://www.youtube.com/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">YouTube</a>
+        <a href="https://www.pinterest.com/alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">Pinterest</a>
+        <a href="https://www.threads.net/@alisufiyanshaxx" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">Threads</a>
+        <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" rel="noopener noreferrer" class="border border-white px-4 py-2 rounded hover:bg-white hover:text-black min-touch">LinkedIn</a>
+      </div>
+    </section>
 
-  </main>  <!-- Footer -->  <footer class="text-center py-10 border-t border-gray-700" data-aos="fade-in">
+    <section class="mb-12" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+      <form action="https://formspree.io/f/xvgrdver" method="POST" class="space-y-4 max-w-xl">
+        <label for="name" class="block text-gray-400">Name</label>
+        <input id="name" type="text" name="name" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue" placeholder="Your Name">
+        <label for="email" class="block text-gray-400">Email</label>
+        <input id="email" type="email" name="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue" placeholder="Your Email">
+        <label for="message" class="block text-gray-400">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-blue" placeholder="Your Message"></textarea>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-300 min-touch focus:outline-blue">Send Message</button>
+      </form>
+      <div id="form-status" class="hidden mt-4 p-3 rounded"></div>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 border-t border-gray-700" data-aos="fade-in">
     <p class="text-gray-500 text-sm">&copy; 2025 Alisufiyan Shaikh. All rights reserved.</p>
     <p class="text-gray-600 text-xs italic mt-1">Trademark and digital identity protected under international law.</p>
     <p class="text-gray-400 text-sm mt-2">Profiles:
       <a href="https://www.linkedin.com/in/alisufiyanshaikh" target="_blank" class="underline text-white hover:text-gray-300">LinkedIn</a> |
       <a href="https://instagram.com/alisufiyanshaxx" target="_blank" class="underline text-white hover:text-gray-300">Instagram</a>
     </p>
-  </footer>  <script>
-    document.addEventListener("DOMContentLoaded", () => { 
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
       AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
       const form = document.querySelector('form');
       const formStatus = document.getElementById('form-status');
@@ -181,23 +238,4 @@
           try {
             const response = await fetch(form.action, {
               method: 'POST',
-              body: new FormData(form),
-              headers: { 'Accept': 'application/json' }
-            });
-            if (response.ok) {
-              formStatus.textContent = 'Message sent successfully!';
-              formStatus.className = 'mt-4 p-3 rounded bg-green-900 text-green-100';
-              form.reset();
-            } else {
-              throw new Error('Form submission failed');
-            }
-          } catch (error) {
-            formStatus.textContent = 'Error sending message. Please try again.';
-            formStatus.className = 'mt-4 p-3 rounded bg-red-900 text-red-100';
-          }
-          setTimeout(() => { formStatus.classList.add('hidden'); }, 5000);
-        });
-      }
-    });
-  </script></body>
-  </html>
+              body
